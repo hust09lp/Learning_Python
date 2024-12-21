@@ -50,11 +50,12 @@ class Clock:
                     self.hour = 0
 
     def show(self):
+        # \r的运用主要是为了能重新覆盖打印
         print(f'\r{self.hour} : {self.minute} : {self.second}', end='')
 
-clk1 = Clock(23, 48, 58)
+clk1 = Clock(23, 59, 58)
 
-# for _ in range(20):
-#     clk1.show()
-#     time.sleep(1)
-#     clk1.run()
+for _ in range(20):
+    clk1.show()
+    time.sleep(1)
+    clk1.run()
